@@ -1,9 +1,6 @@
 package com;
 
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class Homework3 {
     public static void main(String[] args) {
@@ -20,7 +17,13 @@ public class Homework3 {
         Iterator iterator=entry.iterator();
         while (iterator.hasNext()) {
             Object next =  iterator.next();
-            System.out.println(((HashMap.Entry)iterator).getKey());
+           System.out.println(((Map.Entry)next).getKey());
+        }
+        Collection value =hashMap.values();
+        Iterator iterator1 =value.iterator();
+        while (iterator1.hasNext()) {
+            Object next =  iterator1.next();
+            System.out.println(next);
         }
     }
 }
